@@ -33,6 +33,7 @@ pipeline:
                   name: setup virtual environment
                   spec:
                     command: |-
+                      echo "Welcome to Harness CI"
                       python3 -m venv .venv
                       . .venv/bin/activate
                       python3 -m pip install -r requirements.txt
@@ -51,9 +52,10 @@ pipeline:
                   timeout: ""
                   type: BuildAndPushDockerRegistry
           platform:
-            arch: Amd64
             os: Linux
+            arch: Amd64
           runtime:
-            spec: {}
             type: Cloud
+            spec: {}
         type: CI
+        description: ""
