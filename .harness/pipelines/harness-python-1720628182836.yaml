@@ -44,11 +44,11 @@ pipeline:
                   identifier: dockerbuild
                   name: docker_build
                   spec:
-                    caching: true
-                    connectorRef: <+input>
+                    connectorRef: luabik_priv
                     repo: hello/world
                     tags:
                       - latest
+                    caching: true
                   timeout: ""
                   type: BuildAndPushDockerRegistry
           platform:
