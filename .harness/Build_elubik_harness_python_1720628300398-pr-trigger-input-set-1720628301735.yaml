@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_elubik_harness_python_1720628300398-pr-trigger-input-set
+  identifier: Build_elubik_harness_python_1720628300398prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: default_project
+  pipeline:
+    identifier: Build_elubik_harness_python_1720628300398
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
