@@ -1,5 +1,11 @@
 FROM python:3.5.1-alpine
-MAINTAINER Greg Taylor <gtaylor@gc-taylor.com>
+MAINTAINER Emil Lubikowski <e.lubikowski@gmail.com>
+
+# Run CA certificates update
+RUN apk update && apk add ca-certificates
+# The certifi package provides a bundle of CA certificates for Python.
+# Let us ensure certifi is installed and up to date.
+RUN pip install --upgrade certifi
 
 RUN pip install --upgrade pip setuptools wheel
 COPY wheeldir /opt/app/wheeldir
