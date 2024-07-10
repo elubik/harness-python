@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_elubik_harness_python_1720628300398-push-trigger-input-set
+  identifier: Build_elubik_harness_python_1720628300398pushtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: default_project
+  pipeline:
+    identifier: Build_elubik_harness_python_1720628300398
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
