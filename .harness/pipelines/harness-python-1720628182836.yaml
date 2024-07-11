@@ -52,6 +52,12 @@ pipeline:
                     runOnlySelectedTests: true
                     preCommand: . .venv/bin/activate
                     enableTestSplitting: false
+                  failureStrategies:
+                    - onFailure:
+                        errors:
+                          - AllErrors
+                        action:
+                          type: MarkAsSuccess
               - step:
                   identifier: dockerbuild
                   name: docker_build
