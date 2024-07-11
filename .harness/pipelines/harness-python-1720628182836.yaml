@@ -50,6 +50,7 @@ pipeline:
                     language: Python
                     buildTool: Pytest
                     runOnlySelectedTests: true
+                    preCommand: . .venv/bin/activate
                     enableTestSplitting: false
               - step:
                   identifier: dockerbuild
